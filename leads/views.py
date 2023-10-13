@@ -8,5 +8,11 @@ def lead_list(request):
     context = {
         'leads': leads
     }
-    return render(request, 'lead_list.html', context)
+    return render(request, 'leads/lead_list.html', context)
 
+def lead_detail(request, pk):
+    lead = Lead.objects.get(id=pk)
+    context = {
+        'lead': lead
+    }
+    return render(request, 'leads/lead_detail.html', context)
