@@ -1,7 +1,7 @@
 from django.urls import path
 
-from leads.views import home_page
+from .views import lead_list
 
 urlpatterns = [
-    path('', home_page)
+    path('', lead_list)
 ]
